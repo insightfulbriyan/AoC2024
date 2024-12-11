@@ -6,14 +6,14 @@ with open("input.txt", "r") as f:
         disk += [i]*int(f[2*i])
         disk += "."*int(f[2*i+1])
         
-    print(disk)
+    # print(disk)
     while "." in disk:
         c = disk.pop()
         if c == ".":
             continue
         disk[disk.index(".")] = c
 
-    print(disk)
+    # print(disk)
     checksum = 0
     for i in range(len(disk)):
         checksum += i*int(disk[i])
